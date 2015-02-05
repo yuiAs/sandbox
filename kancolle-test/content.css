@@ -1,0 +1,58 @@
+div#kancolle-test-root {
+  position: absolute;
+  top: 16px;
+  padding: 0.5em;
+  width: 800px;
+  box-sizing: border-box;
+  background-color: rgba(0,0,21,0.2);
+  z-index: 32767;
+  pointer-events: none;
+}
+
+#kancolle-test-logs {
+  white-space: pre-wrap;
+  font-family: "Segoe UI", "Hiragino Kaku Gothic ProN", "Open Sans", Helvetica, "Meiryo", monospace;
+  text-align: start;
+  line-height: 1.2em;
+  color: rgba(235,235,235,1.0);
+  text-shadow: -1px -1px rgba(0,0,21,0.6), 1px -1px rgba(0,0,21,0.6), 1px 1px rgba(0,0,21,0.6), -1px 1px rgba(0,0,21,0.6);
+}
+
+.game_frame_filter {
+  -webkit-filter: grayscale(95%);
+}
+
+.game_frame_scaler {
+  -webkit-transform: scale(0.5);
+  -webkit-transform-origin: 0 16px;
+}
+
+
+body {
+  min-width: initial;
+}
+
+div#dmm_ntgnavi .navi_right li {
+  cursor: pointer;
+}
+
+/* 優先度上げのため余計に定義 */
+div#w div#main-ntg {
+  margin: auto;
+  text-align: left;
+}
+
+div#area-game {
+  position: relative;
+}
+
+div#area-game iframe#game_frame {
+  position: relative;
+  width: 800px;
+  height: 610px;
+}
+
+div.area-naviapp,
+#foot {
+  display: none;
+}
