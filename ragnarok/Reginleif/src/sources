@@ -1,0 +1,84 @@
+################################################################################
+
+TARGETNAME=randgriz
+TARGETPATH=obj
+TARGETTYPE=DYNLINK
+TARGETEXT=dll
+
+DLLENTRY=_DllMainCRTStartup
+DLLBASE=0x65000000
+
+MAKEDLL=1
+
+################################################################################
+
+USE_MSVCRT=1
+USE_NOLIBS=1
+USE_NATIVE_EH=1
+NO_WCHAR_T=1
+BUFFER_OVERFLOW_CHECKS=0
+NOT_LEAN_AND_MEAN=0
+
+!if $(FREEBUILD)
+MSC_WARNING_LEVEL=/W3
+!else
+MSC_WARNING_LEVEL=/W3
+!endif
+
+################################################################################
+
+USER_C_FLAGS=/Zc:wchar_t /fp:fast
+
+!if $(FREEBUILD)
+MSC_OPTIMIZATION=/O2 /Oi /Oy
+!else
+MSC_OPTIMIZATION=/Od
+!endif
+
+################################################################################
+
+LINKER_WX_SWITCH=
+LINKER_FLAGS=$(LINKER_FLAGS)
+
+################################################################################
+
+C_DEFINES_WINDEF=/D_WINDOWS /DUNICODE /D_UNICODE /DWIN32_LEAN_AND_MEAN
+C_DEFINES_APPDEF=/DPRIVATE_BUILD
+
+!if $(FREEBUILD)
+C_DEFINES_APPDEF=$(C_DEFINES_APPDEF)
+!else
+C_DEFINES_WINDEF=$(C_DEFINES_WINDEF) /D_DEBUG
+C_DEFINES_APPDEF=$(C_DEFINES_APPDEF)
+!endif
+
+C_DEFINES=$(C_DEFINES) $(C_DEFINES_WINDEF) $(C_DEFINES_APPDEF)
+
+################################################################################
+
+INCLUDES=$(DDK_INC_PATH)
+
+################################################################################
+
+SOURCES=\
+	DllMain.cpp				\
+	WinAdvApi.cpp			\
+	Module.cpp				\
+	ModuleUtil.cpp			\
+	Packet.cpp				\
+	PacketHandler.cpp		\
+	ClientApi.cpp			\
+	ClientInvestigator.cpp	\
+	ROSaveChat.cpp			\
+
+TARGETLIBS=\
+	$(DDK_LIB_PATH)\ntdll.lib		\
+	$(SDK_LIB_PATH)\kernel32.lib	\
+	$(SDK_LIB_PATH)\user32.lib		\
+!if ($(_NT_TARGET_VERSION) > 0x500)
+	$(SDK_LIB_PATH)\crypt32.lib		\
+!endif
+	$(SDK_LIB_PATH)\gdi32.lib		\
+	$(SDK_LIB_PATH)\gdiplus.lib		\
+	$(SDK_LIB_PATH)\shlwapi.lib		\
+#	$(SDK_LIB_PATH)\strsafe.lib		\

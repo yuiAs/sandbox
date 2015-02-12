@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MayQueen", "MayQueen\MayQueen.vcproj", "{1F113CBC-4B80-448A-AF2F-85EAEA1EFB5D}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "aokubi-daicon", "aokubi-daicon\aokubi-daicon.vcproj", "{CEDC95E0-9157-4B36-A702-9D4059671B56}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{1F113CBC-4B80-448A-AF2F-85EAEA1EFB5D}.Debug.ActiveCfg = Debug|Win32
+		{1F113CBC-4B80-448A-AF2F-85EAEA1EFB5D}.Debug.Build.0 = Debug|Win32
+		{1F113CBC-4B80-448A-AF2F-85EAEA1EFB5D}.Release.ActiveCfg = Release|Win32
+		{1F113CBC-4B80-448A-AF2F-85EAEA1EFB5D}.Release.Build.0 = Release|Win32
+		{CEDC95E0-9157-4B36-A702-9D4059671B56}.Debug.ActiveCfg = Debug|Win32
+		{CEDC95E0-9157-4B36-A702-9D4059671B56}.Debug.Build.0 = Debug|Win32
+		{CEDC95E0-9157-4B36-A702-9D4059671B56}.Release.ActiveCfg = Release|Win32
+		{CEDC95E0-9157-4B36-A702-9D4059671B56}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

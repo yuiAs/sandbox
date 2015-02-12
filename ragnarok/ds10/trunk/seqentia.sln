@@ -1,0 +1,22 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "seqentia", "seqentia.vcproj", "{820969A8-A600-43B2-B82B-91231B9FD97E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release_public|Win32 = Release_public|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{820969A8-A600-43B2-B82B-91231B9FD97E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{820969A8-A600-43B2-B82B-91231B9FD97E}.Debug|Win32.Build.0 = Debug|Win32
+		{820969A8-A600-43B2-B82B-91231B9FD97E}.Release_public|Win32.ActiveCfg = Release_public|Win32
+		{820969A8-A600-43B2-B82B-91231B9FD97E}.Release_public|Win32.Build.0 = Release_public|Win32
+		{820969A8-A600-43B2-B82B-91231B9FD97E}.Release|Win32.ActiveCfg = Release|Win32
+		{820969A8-A600-43B2-B82B-91231B9FD97E}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

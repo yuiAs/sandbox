@@ -1,0 +1,17 @@
+偽芋
+
+- RagAddress.iniの代わりにRoAddr.iniを使うためのラッパーみたいなものです
+  昔あったやつを1から作り直しという感じで…
+
+
+- AutoImoFE.exe/AutoImoFE.dllをAutoImo.exeと同じdirectoryにおいて
+  AutoImoFE.exeを実行してください(AutoImo.exeじゃないです)
+- RoAddr.iniは(いろいろ手抜きしたので)AutoImo.exeと同一directoryにおいてください
+
+
+
+2004-06-30a
+- 思いつきでremake
+
+遥か昔
+- 思いつきで作成

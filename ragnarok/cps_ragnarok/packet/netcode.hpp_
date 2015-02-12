@@ -1,0 +1,46 @@
+#ifndef NETCODE_HPP
+#define NETCODE_HPP
+
+#include <winsock2.h>
+#include <windows.h>
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+class CNetcode
+{
+	static CNetcode* m_this;
+
+protected:
+
+	void *m_pfn_connect, *m_recv, *m_send, *m_pfn_inet_addr;
+
+public:
+
+	CNetcode() { m_this = this; }
+	virtual ~CNetcode();
+
+	void start();
+
+private:
+	
+	// ŽÀ‘•‚µ‚È‚­‚Ä‚Í‚¢‚¯‚È‚¢‚à‚Ì
+
+	virtual int recvCall(BYTE* __recvBuf, int __recvLen) = 0;
+	virtual int sendCall(BYTE* __sendBuf, int __sendLen) = 0;
+
+	virtual int WSAAPI ws2_connect(SOCKET s, const struct sockaddr FAR * name, int namelen);
+	virtual int WSAAPI ws2_recv(SOCKET s, char *buf, int len, int flags);
+	virtual int WSAAPI ws2_send(SOCKET s, const char *buf, int len, int flags);
+	virtual unsigned long WSAAPI ws2_inet_addr(const char* cp);
+
+public:
+
+	static int WSAAPI __ws2_connect(SOCKET s, const struct sockaddr FAR * name, int namelen);
+	static int WSAAPI __ws2_recv(SOCKET s, char *buf, int len, int flags);
+	static int WSAAPI __ws2_send(SOCKET s, const char *buf, int len, int flags);
+	static unsigned long WSAAPI __ws2_inet_addr(const char* cp);
+};
+
+
+#endif	// #ifndef NETCODE_HPP

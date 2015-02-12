@@ -1,0 +1,4 @@
+LIBRARY cps
+EXPORTS
+	compress = compress @ 1
+	uncompress = uncompress @ 2

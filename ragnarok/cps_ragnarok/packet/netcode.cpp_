@@ -1,0 +1,72 @@
+#include "netcode.hpp"
+#include "peimage.hpp"
+extern PEImage* pe;
+
+
+CNetcode* CNetcode::m_this = 0;
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+int WSAAPI CNetcode::ws2_connect(SOCKET s, const struct sockaddr FAR * name, int namelen)
+{
+	typedef int (WSAAPI *WS2_CONNECT)(SOCKET, const struct sockaddr FAR *, int);
+	return reinterpret_cast<WS2_CONNECT>(m_pfn_connect)(s, name, namelen);
+}
+
+
+int WSAAPI CNetcode::ws2_recv(SOCKET s, char *buf, int len, int flags)
+{
+	typedef int (WSAAPI *WS2_RECV)(SOCKET, char*, int, int);
+	int result = reinterpret_cast<WS2_RECV>(m_pfn_recv)(s, buf, len, flags);
+
+	if (result != SOCKET_ERROR)
+		result += recvCall(reinterpret_cast<BYTE*>(buf), result);
+
+	return result;
+}
+
+
+int WSAAPI CNetcode::ws2_send(SOCKET s, const char *buf, int len, int flags)
+{
+	int result = sendCall(reinterpret_cast<BYTE*>(const_cast<char*>(buf)), len);
+	if (result != 0)
+		return result;
+
+	typedef int (WSAAPI *WS2_SEND)(SOCKET, const char*, int, int);
+	return reinterpret_cast<WS2_SEND>(m_pfn_send)(s, buf, len, flags);
+}
+
+
+unsigned long WSAAPI CNetcode::ws2_inet_addr(const char* cp)
+{
+	typedef unsigned long (WSAAPI *WS2_INET_ADDR)(const char*);
+	return reinterpret_cast<WS2_INET_ADDR>(m_pfn_inet_addr)(cp);
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+int WSAAPI CNetcode::__ws2_connect(SOCKET s, const struct sockaddr FAR * name, int namelen)
+{
+	CNetcode* c = CNetcode::m_this;
+	return c->ws2_connect(s, name, namelen);
+}
+
+int WSAAPI CNetcode::__ws2_recv(SOCKET s, char *buf, int len, int flags)
+{
+	CNetcode* c = CNetcode::m_this;
+	return c->ws2_recv(s, buf, len, flags);
+}
+
+int WSAAPI CNetcode::__ws2_send(SOCKET s, const char *buf, int len, int flags)
+{
+	CNetcode* c = CNetcode::m_this;
+	return c->ws2_send(s, buf, len, flags);
+}
+
+unsigned long WSAAPI CNetcode::__ws2_inet_addr(const char* cp)
+{
+	CNetcode* c = CNetcode::m_this;
+	return c->ws2_inet_addr(pfn_inet_addr)(cp);
+}

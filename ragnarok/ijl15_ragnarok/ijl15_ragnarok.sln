@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ijl15_ragnarok", "ijl15_ragnarok.vcproj", "{4082F74B-C737-43B1-90A3-92DF7B445B81}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+		Release_public = Release_public
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{4082F74B-C737-43B1-90A3-92DF7B445B81}.Debug.ActiveCfg = Debug|Win32
+		{4082F74B-C737-43B1-90A3-92DF7B445B81}.Debug.Build.0 = Debug|Win32
+		{4082F74B-C737-43B1-90A3-92DF7B445B81}.Release.ActiveCfg = Release|Win32
+		{4082F74B-C737-43B1-90A3-92DF7B445B81}.Release.Build.0 = Release|Win32
+		{4082F74B-C737-43B1-90A3-92DF7B445B81}.Release_public.ActiveCfg = Debug|Win32
+		{4082F74B-C737-43B1-90A3-92DF7B445B81}.Release_public.Build.0 = Debug|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

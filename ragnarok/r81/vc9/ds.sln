@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ds", "ds.vcproj", "{F3D3367F-2270-4A75-B1D1-5306FB4FF5E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		dbg|Win32 = dbg|Win32
+		rel_nodbg|Win32 = rel_nodbg|Win32
+		rel|Win32 = rel|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F3D3367F-2270-4A75-B1D1-5306FB4FF5E3}.dbg|Win32.ActiveCfg = dbg|Win32
+		{F3D3367F-2270-4A75-B1D1-5306FB4FF5E3}.dbg|Win32.Build.0 = dbg|Win32
+		{F3D3367F-2270-4A75-B1D1-5306FB4FF5E3}.rel_nodbg|Win32.ActiveCfg = rel_nodbg|Win32
+		{F3D3367F-2270-4A75-B1D1-5306FB4FF5E3}.rel_nodbg|Win32.Build.0 = rel_nodbg|Win32
+		{F3D3367F-2270-4A75-B1D1-5306FB4FF5E3}.rel|Win32.ActiveCfg = rel|Win32
+		{F3D3367F-2270-4A75-B1D1-5306FB4FF5E3}.rel|Win32.Build.0 = rel|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
