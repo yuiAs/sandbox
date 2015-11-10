@@ -56,3 +56,15 @@ div.area-naviapp,
 #foot {
   display: none;
 }
+
+/* 以下実験中 */
+
+/*
+   ゲーム画面領域を最低限に
+   上のほうの iframe#game_frameでの width, heightの変更は不要
+   ゲーム画面領域うえのほうは iframe内で spacingされてるのでこれを潰せるなら +16pxは不要
+*/
+div#area-game {
+  height: calc(480px + 16px);
+  overflow-y: hidden;
+}
