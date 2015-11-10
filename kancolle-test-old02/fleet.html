@@ -1,0 +1,36 @@
+<!doctype html>
+<html ng-app="KancolleTestPanel" ng-csp="">
+<head>
+<link rel="stylesheet" type="text/css" href="/winjs/css/ui-dark.css" />
+<link rel="stylesheet" type="text/css" href="/fleet.css" />
+<script type="text/javascript" src="/winjs/js/base.min.js"></script>
+<script type="text/javascript" src="/winjs/js/ui.min.js"></script>
+<script type="text/javascript" src="/fleet.js"></script>
+</head>
+<body class="win-type-body">
+
+<div id="page-fleet">
+<table class="table">
+<tbody class="table-repeater" data-win-control="WinJS.UI.Repeater"></tbody>
+</table>
+</div>
+
+<table class="invisible">
+<tbody class="table-lvitem-template">
+  <tr class="lvhead">
+    <th class="lvhead-name" colspan="3"></th>
+    <th class="lvhead-time" colspan="3"></th>
+  </tr>
+  <tr class="lvitem">
+    <td class="lvitem-name"></td>
+    <td class="lvitem-lv"></td>
+    <td class="lvitem-hp"></td>
+    <td class="lvitem-x1"></td>
+    <td class="lvitem-x2"></td>
+    <td class="lvitem-condition"></td>
+  </tr>
+</tbody>
+</table>
+
+</body>
+</html>

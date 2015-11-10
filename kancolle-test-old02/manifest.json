@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+    "name": "kancolle-test",
+    "version": "0.1.0",
+    "description": "艦これ用の何か",
+    "background": {
+        "persistent": true,
+        "scripts": [ "background.js" ]
+    },
+    "content_scripts": [
+        {
+            "matches": [ "http://www.dmm.com/netgame/social/-/gadgets/=/app_id=854854/" ],
+            "js": [ "content.js" ],
+            "css": [ "content.css" ]
+        }
+    ],
+    "permissions": [
+        "storage",
+        "webRequest",
+        "webRequestBlocking",
+        "http://*/kcsapi/*"
+    ],
+    "web_accessible_resources": [
+        "assets/icons/*",
+        "content.css"
+    ],
+    "devtools_page": "devtools.html"
+}

@@ -1,0 +1,38 @@
+body {
+  font-family: 'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Open Sans', Helvetica, 'Meieyo', sans-serif;
+  font-weight: 400;
+  color: rgb(235,235,235);
+  min-width: initial !important;
+}
+
+#dmm-ntgnavi-renew {
+  margin-bottom: 0 !important;
+}
+
+#ntg-recommend {
+  display: none;
+}
+
+/* セレクタ数増やしてプライオリティを上げておかないと打ち消される */
+#w #main-ntg {
+  margin: auto;
+  text-align: left;
+  padding: 0;
+}
+
+#area-game {
+  position: relative;
+  /* ゲーム画面領域は iframe内で spacingされてるのでこれを潰せるなら +16pxは不要 */
+  height: calc(480px + 16px);
+  overflow-y: hidden;
+}
+
+#area-game #game_frame {
+  position: relative;
+  width: 800px !important;
+}
+
+.area-naviapp,
+#foot {
+  display: none;
+}

@@ -1,0 +1,89 @@
+#page-fleet {
+  -webkit-user-select: initial;
+  height: inherit;
+  overflow-y: auto;
+}
+.invisible {
+  display: none;
+}
+
+#page-fleet .table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-bottom: 1px rgb(51,51,51) solid;
+  margin-bottom: 1em;
+}
+#page-fleet .table th,
+#page-fleet .table td {
+  padding: 0.1em 0.5em;
+  border-bottom: 1px rgb(51,51,51) solid;
+  vertical-align: middle;
+}
+#page-fleet .table tr:last-child td,
+#page-fleet .table tbody {
+  border-bottom: none;
+}
+#page-fleet .lvhead {
+  background-color: rgb(51,51,51);
+  border-bottom: none;
+}
+#page-fleet .lvhead > th {
+  padding-top: 0.5em;
+  border-bottom: none;
+}
+#page-fleet .lvhead ~ .lvitem {
+  display: table-row;
+}
+#page-fleet .lvhead-name {
+  font-size: 1.1em;
+  text-align: left;
+}
+#page-fleet .lvhead-time {
+  font-size: 0.8em;
+  text-align: right;
+}
+
+#page-fleet .lvitem-name {
+  font-size: 1.1em;
+  min-width: 8em;
+  white-space: nowrap;
+}
+#page-fleet .lvitem-lv {
+  font-size: 0.8em;
+  min-width: 2em;
+}
+#page-fleet .lvitem-hp {
+  min-width: 4em;
+}
+#page-fleet .lvitem-lv,
+#page-fleet .lvitem-hp,
+#page-fleet .lvitem-condition {
+  text-align: right;
+}
+#page-fleet .lvitem-x1 {
+  min-width: calc(32px * 4);
+  height: 32px;
+}
+#page-fleet .lvitem-x2 {
+  min-width: calc(32px * 1);
+  height: 32px;
+}
+#page-fleet .lvitem-x1 > img {
+  width: 32px;
+  vertical-align: text-bottom;
+}
+#page-fleet .lvitem-x2 > img {
+  width: 32px;
+  vertical-align: text-bottom;
+}
+
+/* これは共通にしてもいいかも */
+#page-fleet .color-rate1 {
+  color: rgb(153,180,51);
+}
+#page-fleet .color-rate2 {
+  color: rgb(255,196,13);
+}
+#page-fleet .color-rate3 {
+  color: rgb(238,17,17);
+}
