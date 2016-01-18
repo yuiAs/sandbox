@@ -1,0 +1,60 @@
+@import url(https://fonts.googleapis.com/css?family=Inconsolata);
+
+div.kct-body {
+    position: absolute;
+    top: 86px;
+    left: 300px;
+
+    background-color: rgba(0,0,0,0.6);
+    color: rgb(255,255,255);
+    box-sizing: border-box;
+    padding: 0.5em;
+    width: 500px;
+    pointer-events: none;
+
+    font-family: "Inconsolata", monospace;
+    font-size: 10.5px;
+    font-weight: 400;
+    line-height: 1.1em;
+}
+
+div.kct-logs {
+    white-space: pre;
+    margin: 0;
+
+    font-weight: 600;
+    color: rgba(255,255,230,0.8);
+}
+
+.kct-logs span {
+    margin: 0 0.4em 0 0;
+
+    vertical-align: middle;
+}
+
+.kct-logs .name {
+    display: inline-block;
+    width: 6em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.rate-color1 {
+    color: rgb(153,180,51);
+}
+
+.rate-color2 {
+    color: rgb(227,162,26);
+}
+
+.rate-color3 {
+    color: rgb(218,83,44);
+}
+
+.is-invisible {
+    visibility: hidden;
+}
+
+.is-grayscaled {
+    -webkit-filter: grayscale(95%);
+}
